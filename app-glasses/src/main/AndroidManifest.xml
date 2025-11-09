@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-feature android:name="android.hardware.camera.any" />
+
+    <application
+        android:label="Collision App (Glass)"
+        android:theme="@style/Theme.AppCompat.NoActionBar"
+        tools:replace="android:label,android:theme">
+
+        <activity
+            android:name=".GlassesActivity"
+            android:exported="true"
+            android:label="Start Collision Detector"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+
+                <action android:name="com.google.android.glass.action.VOICE_TRIGGER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>
